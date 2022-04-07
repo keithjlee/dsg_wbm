@@ -198,6 +198,7 @@ namespace dsg_wbm
 
             // Block B
             Matrix<double> b = Matrix<double>.Build.Dense(3, 3);
+            b[0, 0] = 0;
             b[1, 2] = 6 * L * Iz;
             b[2, 1] = -6 * L * Iy;
 

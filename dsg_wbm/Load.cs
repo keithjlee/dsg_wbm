@@ -16,7 +16,7 @@ namespace dsg_wbm
 
         public Load(List<Node> nodes, Vector<double> position, Vector<double> load)
         {
-            List<double> distances = new List<double>();
+            List<double> distances = new List<double>(); 
             for(int i = 0; i < nodes.Count; i++)
             {
                 distances.Add((nodes[i].Position - position).L2Norm());

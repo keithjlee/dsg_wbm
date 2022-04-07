@@ -37,5 +37,19 @@ nodes.Add(n2);
 nodes.Add(n3);
 nodes.Add(n4);
 
+// list of elements
+List<Element> elements = new List<Element>();
+Element e1 = new Element(nodes, new Tuple<int, int> (0, 1));
 
+// testing EnumeratedIndex
+Matrix<double> testK = Analysis.kElementalFrame(E, A, G, 2.0, Iz, Iy, J);
 
+var testKEnumerated = testK.EnumerateIndexed();
+
+foreach(var testKE in testKEnumerated)
+{
+    var rowid = testKE.Item1;
+    var colid = testKE.Item2;
+
+    Console.WriteLine($"Row id: {rowid}; Col id: {colid}");
+}

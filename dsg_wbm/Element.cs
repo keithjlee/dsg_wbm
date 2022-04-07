@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using MathNet.Numerics.LinearAlgebra;
 
 namespace dsg_wbm
-{
+{ 
     public class Element
     {
         // Fields
